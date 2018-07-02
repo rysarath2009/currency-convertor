@@ -1,0 +1,13 @@
+{
+    "local": {
+        "projectInfo": {
+            "appName": "currency-convertor",
+            "hostName": "currency-convertor-local",
+            "memory": "512M",
+            "instances": 1,
+            "env": "nonprod"
+        },
+        "fixerUrl": "http://data.fixer.io/api/latest?access_key=c508f1138f8337c54bb7f315f4fbd02f&base=EUR&symbols=USD,CAD,EUR",
+        "authUrl": "http://localhost:3000"
+    }
+}

@@ -1,0 +1,30 @@
+
+.currency-container {
+    float: left;
+    border: 1px solid black;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+}
+
+.convertor-parent {
+    width: 100%;
+}
+
+.disclaimer {
+    text-decoration: underline;
+    color: blue;
+}
+
+.disclaimer:hover {
+    cursor: pointer;
+}
+
+.disclaimer-data {
+    padding-top: 25px;
+    display: block;
+    width: 250px;
+    @media screen and (max-width: 420px)
+    {
+        width: 100%;
+    }
+}

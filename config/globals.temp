@@ -1,0 +1,5 @@
+'use strict';
+
+export var AppVersion=$version;
+export var CONFIG=$config;
+export var USE_LOGIN=false;

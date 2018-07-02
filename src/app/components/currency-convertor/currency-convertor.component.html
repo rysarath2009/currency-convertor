@@ -1,0 +1,53 @@
+<div class="convertor-parent">
+    <div class="convertor-child">
+        <div *ngIf="conversionTo.inValidResponse" class="slds-grid slds-grid_vertical-align-start">{{serviceFailureText}}
+        </div>
+        <div class="slds-grid slds-grid_vertical-align-start slds-text-heading--medium">
+            <h3>Currency Convertor</h3>
+        </div>
+        <div class="slds-grid slds-grid_vertical-align-start slds-text-heading--small slds-m-bottom--small slds-m-top--small">Type in Amount in select Currency:
+        </div>
+        <div class="slds-grid slds-grid_vertical-align-start">
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <input OnlyNumber="{{fromData}}" id="fromInput" class="{{conversionTo.inValidResponse?'slds-input disabled-text':'slds-input'}}"
+                        [(ngModel)]="fromData" placeholder="0.00" (keypress)="populateDataKeyUp($event)" (keyup)="populateData()"
+                    />
+                </div>
+            </div>
+            <div class="slds-form-element slds-m-left--medium">
+                <div class="slds-form-element__control">
+                    <div class="slds-select_container">
+                        <select (change)="populateData()" class="slds-select slds-theme--shade currency-dropdown-width" [(ngModel)]="fromDpDn" id="fromDpDnId">
+                            <option *ngFor="let item of dropdownItems" [value]="item">{{item}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid slds-grid_vertical-align-start slds-text-heading--small slds-m-bottom--small slds-m-top--small">Converted Amount:
+        </div>
+        <div class="slds-grid slds-grid_vertical-align-start">
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <input type="number" id="toInput" [disabled]="true" class="{{conversionTo.inValidResponse?'slds-input disabled-text':'slds-input'}}"
+                        [(ngModel)]="toData" placeholder="0.00" />
+                </div>
+            </div>
+            <div class="slds-form-element slds-m-left--medium">
+                <div class="slds-form-element__control">
+                    <div class="slds-select_container">
+                        <select (change)="populateData()" class="slds-select slds-theme--shade currency-dropdown-width" [(ngModel)]="toDpdn" id="toDpDnId">
+                            <option *ngFor="let item of dropdownItems" [value]="item">{{item}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-float--right">
+            <a tabindex="0" class="disclaimer" (click)="discliamerInvoked()">Disclaimer</a>
+        </div>
+        <div *ngIf="showDisclimer" class="disclaimer-data">{{disclimerText}}
+        </div>
+    </div>
+</div>

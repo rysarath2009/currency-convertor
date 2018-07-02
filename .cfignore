@@ -1,0 +1,13 @@
+*.manifest.yml
+*.zip
+*.tar.gz
+*.d.ts
+.vscode
+tsd.json
+typings.json
+jsconfig.json
+/node_modules/
+/coverage/
+/e2e/
+/src/
+npm-debug.log

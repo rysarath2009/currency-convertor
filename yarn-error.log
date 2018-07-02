@@ -1,0 +1,116 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js lint
+
+PATH: 
+  C:\Users\sxr8345\Downloads\currency-convertor-master\currency-convertor-master\node_modules\.bin;C:\Users\sxr8345\AppData\Local\Yarn\Data\link\node_modules\.bin;C:\Users\sxr8345\Downloads\currency-convertor-master\currency-convertor-master\node_modules\.bin;C:\Users\sxr8345\AppData\Local\Yarn\Data\link\node_modules\.bin;C:\Users\sxr8345\AppData\Roaming\npm\bin;C:\Program Files\libexec\lib\node_modules\npm\bin\node-gyp-bin;C:\Program Files\lib\node_modules\npm\bin\node-gyp-bin;C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Program Files\nodejs;C:\Program Files\nodejs\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;C:\Users\sxr8345\Downloads\currency-convertor-master\currency-convertor-master\node_modules\.bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Common Files\ThinPrint\;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Cloud Foundry;C:\Program Files\Git\cmd;C:\Users\sxr8345\AppData\Local\Microsoft\WindowsApps;C:\Users\sxr8345\AppData\Roaming\npm;C:\Users\sxr8345\AppData\Local\Yarn\bin;C:\Program Files\Microsoft VS Code\bin
+
+Yarn version: 
+  1.7.0
+
+Node version: 
+  8.11.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  TypeError: Cannot create property '-npm-artifactory-homedepot-com-artifactory-api-npm-npm-' on string '{"-npm-artifactory-homedepot-com-artifactory-api-npm-npm-":""}'
+      at set (C:\Program Files (x86)\Yarn\lib\cli.js:71592:28)
+      at set (C:\Program Files (x86)\Yarn\lib\cli.js:71606:14)
+      at set (C:\Program Files (x86)\Yarn\lib\cli.js:71586:16)
+      at Function.objectPath.set (C:\Program Files (x86)\Yarn\lib\cli.js:71639:14)
+      at NpmRegistry.mergeEnv (C:\Program Files (x86)\Yarn\lib\cli.js:93627:18)
+      at NpmRegistry.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:31296:12)
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:98:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:116:14
+      at new Promise (<anonymous>)
+
+npm manifest: 
+  {
+    "name": "currency-convertor",
+    "version": "3.10.0",
+    "license": "MIT",
+    "angular-cli": {},
+    "engines": {
+      "node": ">=0.12"
+    },
+    "scripts": {
+      "setup": "node setup/setupMessage.js && yarn install && node setup/setup.js",
+      "start": "NODE_ENV=production node server.js --use_strict",
+      "lint": "ng lint --type-check",
+      "pree2e": "webdriver-manager update",
+      "e2e": "ng e2e --no-webdriver-update",
+      "test": "concurrently --raw \"gulp globals\" \"ng test --single-run --cc\" ",
+      "test:watch": "concurrently --raw \"gulp globals\" \"ng test --cc\" ",
+      "start:server": "node server.js",
+      "start:app": "yarn lint && ng serve --port 3001",
+      "start:local": "concurrently --raw \"gulp build-local\" \"yarn run start:app\" \"yarn run start:server\" ",
+      "build:local": "concurrently --raw \"yarn lint\" \"ng build\" \"gulp build-local\" ",
+      "build:develop": "concurrently --raw \"yarn lint\" \"ng build --prod\" \"gulp build-develop\" ",
+      "build:production": "concurrently --raw \"yarn lint\" \"ng build --prod\" \"gulp build-production\" "
+    },
+    "private": true,
+    "dependencies": {
+      "body-parser": "^1.15.2",
+      "compression": "^1.6.2",
+      "concurrently": "~3.5.1",
+      "core-js": "^2.4.1",
+      "express": "^4.14.0",
+      "file-saver": "^1.3.3",
+      "global": "^4.3.1",
+      "gulp": "^3.9.1",
+      "request": "^2.78.0",
+      "ts-helpers": "^1.1.1",
+      "xlsx": "^0.11.14",
+      "xlsx-style": "^0.8.13",
+      "xml2js": "^0.4.17"
+    },
+    "devDependencies": {
+      "@angular/animations": "^4.3.1",
+      "@angular/cli": "~1.6.1",
+      "@angular/common": "^4.3.1",
+      "@angular/compiler": "~4.4.6",
+      "@angular/compiler-cli": "~4.4.6",
+      "@angular/core": "^4.3.1",
+      "@angular/forms": "^4.3.1",
+      "@angular/http": "^4.0.0",
+      "@angular/platform-browser": "^4.3.1",
+      "@angular/platform-browser-dynamic": "^4.3.1",
+      "@angular/platform-server": "^4.3.1",
+      "@angular/router": "^4.3.1",
+      "@types/jasmine": "^2.2.30",
+      "chalk": "^2.0.1",
+      "codelyzer": "^3.0.1",
+      "gulp-bump": "^2.5.1",
+      "gulp-rename": "^1.2.2",
+      "gulp-replace": "^0.5.4",
+      "gulp-util": "^3.0.7",
+      "jasmine-core": "^2.4.1",
+      "jasmine-spec-reporter": "^4.1.0",
+      "karma": "^1.2.0",
+      "karma-chrome-launcher": "^2.0.0",
+      "karma-cli": "^1.0.1",
+      "karma-coverage-istanbul-reporter": "^1.3.0",
+      "karma-jasmine": "^1.0.2",
+      "karma-spec-reporter": "^0.0.31",
+      "ngx-cookie": "^1.0.0",
+      "prompt": "^1.0.0",
+      "protractor": "^5.1.1",
+      "replace": "^0.3.0",
+      "rimraf": "^2.6.1",
+      "run-sequence": "^1.2.2",
+      "rxjs": "^5.4.2",
+      "systemjs": "^0.20.13",
+      "ts-node": "^3.0.4",
+      "tslint": "~5.8.0",
+      "typescript": "~2.6.2",
+      "zone.js": "^0.8.14"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
