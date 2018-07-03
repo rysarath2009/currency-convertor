@@ -52,7 +52,7 @@ export class CurrencyConvertorComponent {
             keycode = event.charCode;
         }
 
-        if ((keycode === 48 && value === '0') ||
+        if ((event.shiftKey && keycode === 62) || (keycode === 48 && value === '0') ||
             (keycode === 46 && value.indexOf('.') >= 0) ||
             value.split('.')[1].length > 1) {
             if (keycode !== 8) {
